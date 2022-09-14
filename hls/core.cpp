@@ -64,10 +64,4 @@ void inference(stream_io& s_axis, stream_io& m_axis) {
 	out.last = 1;
 	out.data = action;
 	m_axis.write(out);
-
-//	for (int i = 0; i < NUM_CLASSES; i++) {
-//		out.data = percept[i];
-//		out.last = (i == NUM_CLASSES - 1) ? 1 : 0;
-//		m_axis.write(out);
-//	}
 }
