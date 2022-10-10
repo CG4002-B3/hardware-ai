@@ -4,6 +4,8 @@ This document stores records for IMU data collecting.
 
 ## Total
 
+Number of total data points: 160
+
 Name | No Action | Shield | Grenade | Reload | End
 --- | --- | --- | --- |--- |---
 Ramana   |0|20|20|0|0
