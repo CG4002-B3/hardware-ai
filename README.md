@@ -32,7 +32,7 @@ source venv/bin/activate
 
 ### 2.1 Convert raw data
 * Create 2 empty folder `json` and `csv` inside `convert` if they are not there
-* Put all json format txt files to `convert/json`
+* Put all raw data (json format txt) files to `convert/json`
 * Run `python convert.py` 
     * Note: if it throws an error, there must be something wrong with the raw data file in `convert/json`
 * Converted files can be found in `convert/csv`
@@ -45,7 +45,7 @@ source venv/bin/activate
 
 ### 2.3 Extract IP Core (Vivado HLS)
 * Open Vivado HLS
-* Follow [Vivado HLS one-time-setup](#vivado-hls-one-time-setup) to create a new project or open an old project with the correct config
+* Follow [Vivado HLS one-time-setup](#31-vivado-hls-one-time-setup) to create a new project or open an old project with the correct config
 * Update `core.h` file with the parameters from `integration/prepare_hls.ipynb`:
     * Number of input features `INPUT_SIZE`
     * Number of hidden neurons `HIDDEN_SIZE`
@@ -57,7 +57,7 @@ source venv/bin/activate
 
 ### 2.4 Generate Bitstream (Vivado)
 * Open Vivado
-* Follow [Vivado one-time-setup](#vivado-one-time-setup) to create a new project or open an old project with the correct config
+* Follow [Vivado one-time-setup](#32-vivado-one-time-setup) to create a new project or open an old project with the correct config
 
 
 ### 2.5 Transfer bitstream to Ultra96
