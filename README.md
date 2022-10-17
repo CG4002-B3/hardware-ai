@@ -54,6 +54,10 @@ source venv/bin/activate
     * Number of testing samples to compare `NUM_SAMPLES`
     * Put the samples into `input` 2d-array
     * Put the corresponding inference result into `action`
+* Run C Synthesis. If nothing goes wrong, you should see a Synthesis Report with hardware resources usage, latency, ...
+* Run C Siumulation. Check whether the result of the hardware implementation matches the target actions.
+* Run C/RTL Cosimulation (can skip)
+* Export RTL (you may need to change the date time of your computer to the year 2021). 
 
 ### 2.4 Generate Bitstream (Vivado)
 * Open Vivado
@@ -66,9 +70,27 @@ source venv/bin/activate
 
 ## 3.1 Vivado HLS one-time-setup
 * Create a new project 
-* Part number: xczu3eg-sbva484-1-i
+* Specify Project Name and Project Location (should not have space in the path). Click Next
+* Specify the Top Function, should be `inference`. Click Next. Click Next
+* For Solution Configuration, under Part Selection, search for `xczu3eg-sbva484-1-i`. Click OK. Click Finsh
+* Add new files `core.cpp` and `core.h` under `Souce`, `test_core.cpp` under `Test Bench`. The project structure should be like below
+
+```
+project_name
++-- includes
++-- Source
+|   +-- core.cpp
+|   +-- core.h
++-- Test Bench
+|   +-- test_core.cpp
++-- Solution1
+```
+* Copy respective files from `hls`
 
 ## 3.2 Vivado one-time-setup
+* Create a new project. Click Next
+* Specify Project Name and Project Location (should not have space in the path). Click Next 4 times
+* For Default Part, under Parts, search for `xczu3eg-sbva484-1-i`. Click Next. Click Finsh
 
 
 
