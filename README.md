@@ -103,6 +103,9 @@ project_name
     * AXI Interconnect
     * The IP generated in [step 2.3](#23-extract-ip-core-vivado-hls)
 * Make connections as the attached diagram (pay attention to m_axis and s_axis ports), Run Connection Automation if it's prompted. A Processor System Reset block will be automatically added.
+
+![block diagram](imgs/block_diagram.jpeg)
+
 * Click on Zynq UltraScale+ MPSoC and AXI Direct Memory Access to customize the IP (disable Scatter Gather Engine, disable peripherals, match bit length and address length of axi stream). Save block design.
 * Click Validate Design to make sure everything is connected correctly.
 * Under Souces > Design Sources, right click on the design, choose Create HLD Wrapper, click OK.
