@@ -62,9 +62,12 @@ source venv/bin/activate
 ### 2.4 Generate Bitstream (Vivado)
 * Open Vivado
 * Follow [Vivado one-time-setup](#32-vivado-one-time-setup) to create a new project or open an old project with the correct config
-
+* If you already have to correct block design, just refresh the generated IP, or follow the last few steps of [Vivado one-time-setup](#32-vivado-one-time-setup) to remove and add the repo with the new IP again
+* Generate Bitstream
 
 ### 2.5 Transfer bitstream to Ultra96
+* After bitstream is generated using Vivado, the bitstream file `.bit` can be found under `project_dir/runs/impl_1` and the hardware handoff file `.hwh` can be found under `project_dir/project_name.srcs/sources_1/bd/design_name/hw_handoff`
+* Copy those 2 files to Ultra96 (make sure they have the same name)
 
 # 3. Appendix
 
@@ -85,12 +88,22 @@ project_name
 |   +-- test_core.cpp
 +-- Solution1
 ```
-* Copy respective files from `hls`
+* Copy respective files from `hls/`
 
 ## 3.2 Vivado one-time-setup
 * Create a new project. Click Next
-* Specify Project Name and Project Location (should not have space in the path). Click Next 4 times
+* Specify Project name and Project location (should not have space in the path). Click Next 4 times
 * For Default Part, under Parts, search for `xczu3eg-sbva484-1-i`. Click Next. Click Finsh
-
-
-
+* Under Project Manager, choose Settings > Project Settings > IP > IP Repository. Under IP Repositories, click `+` and search for the directory that contains the IP generated in [step 2.3](#23-extract-ip-core-vivado-hls), add that directory to the IP repositories.
+* Under IP Generator, select Create Block Design, specify Design name, and click OK.
+* On the Diagram pannel, click `+` and add the following blocks to the block design:
+    * Zynq UltraScale+ MPSoC
+    * AXI Direct Memory Access
+    * AXI SmartConnect
+    * AXI Interconnect
+    * The IP generated in [step 2.3](#23-extract-ip-core-vivado-hls)
+* Make connections as the attached diagram (pay attention to m_axis and s_axis ports), Run Connection Automation if it's prompted. A Processor System Reset block will be automatically added.
+* Click on Zynq UltraScale+ MPSoC and AXI Direct Memory Access to customize the IP (disable Scatter Gather Engine, disable peripherals, match bit length and address length of axi stream). Save block design.
+* Click Validate Design to make sure everything is connected correctly.
+* Under Souces > Design Sources, right click on the design, choose Create HLD Wrapper, click OK.
+* Generate Bitstream
