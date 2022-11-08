@@ -5,11 +5,11 @@ This document stores records for IMU data collecting.
 ## Total
 
 Number of total data points: 820
-- No action: 330
-- Shield: 265
-- Grenade: 265
-- Reload: 265
-- End: 220
+- No action: 390
+- Shield: 325
+- Grenade: 325
+- Reload: 325
+- End: 240
 
 Name | No Action | Shield | Grenade | Reload | End
 --- | --- | --- | --- |--- |---
@@ -52,3 +52,12 @@ Unseen2   |20|15|15|15|10
 Unseen3   |10|15|15|15|10
 Unseen4   |20|15|15|15|10
 Total     |70|60|60|60|40 
+
+**Trial 4** (2nd glove)
+
+Name | No Action | Shield | Grenade | Reload | End
+--- | --- | --- | --- |--- |---
+Unseen5   |20|15|15|15|10
+Unseen6   |0|15|15|15|0
+Unseen7   |20|15|15|15|10
+Total     |||||
