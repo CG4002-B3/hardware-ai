@@ -50,3 +50,5 @@ Name | No Action | Shield | Grenade | Reload | End
 Unseen1   |20|15|15|15|10
 Unseen2   |20|15|15|15|10
 Unseen3   |10|15|15|15|10
+Unseen4   |20|15|15|15|10
+Total     |70|60|60|60|40 
