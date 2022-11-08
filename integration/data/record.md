@@ -5,11 +5,11 @@ This document stores records for IMU data collecting.
 ## Total
 
 Number of total data points: 820
-- No action: 280
-- Shiled: 220
-- Grenade: 220
-- Reload: 220
-- End: 190
+- No action: 330
+- Shield: 265
+- Grenade: 265
+- Reload: 265
+- End: 220
 
 Name | No Action | Shield | Grenade | Reload | End
 --- | --- | --- | --- |--- |---
@@ -41,15 +41,12 @@ Binh     |32|30|34|30|30
 Khoa     |30|20|20|20|20
 Jiaqi    |30|20|16|20|10
 Song Han |28|30|30|30|20
-Total    |130|120|120|120|100
+Total    |140|120|120|120|100
 
 **Trial 3** (1st glove)
 
 Name | No Action | Shield | Grenade | Reload | End
 --- | --- | --- | --- |--- |---
-Ramana   |0|0|0|0|0
-Binh     |0|0|0|0|0
-Khoa     |0|0|0|0|0
-Jiaqi    |0|0|0|0|0
-Song Han |0|0|0|0|0
-Total    |0|0|0|0|0
+Unseen1   |20|15|15|15|10
+Unseen2   |20|15|15|15|10
+Unseen3   |10|15|15|15|10
