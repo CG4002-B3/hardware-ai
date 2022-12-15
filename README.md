@@ -1,5 +1,7 @@
 # hardware-ai
 
+Hardware AI component for LaserTag project. For more details, please refer to [Project demo](https://youtu.be/nKTPNiXV2OA) and [Hardware AI component explained](https://youtu.be/flD5HsB7LyY)
+
 1. [Set up](#1-set-up)
 2. [Pipeline](#2-pipeline)\
     2.1 [Convert raw data](#21-convert-raw-data)\
